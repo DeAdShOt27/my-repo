@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>CRAZY SHOPPING</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="hero-image">
+    <div class="hero-text">
+      Shop everything with fun!
+    </div>
+  </div>
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <ion-grid class="main-grid">
+
+      <ion-row class="ion-text-center">
+        <ion-col class="ion-text-center" size-lg="4" offset-lg="4" class="login-box">
+
+          <span class="app-name-main">Crazy Shopping</span>
+          <br>
+          <h5>Sign In into your account!</h5>
+
+          <ion-item>
+            <ion-input name="email" type="email" placeholder="Email" ngModel required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+          </ion-item>
+          <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
+          <br>
+          Don't have account? <span routerLink="/home" style="color:#51cccc; cursor: pointer;">Sign Up</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
